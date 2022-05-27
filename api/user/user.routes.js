@@ -67,6 +67,7 @@ router.post("/signup", async (req, res, next) => {
 
     const { username, token } = await signUp(req.body);
 
+    console.log("signed up successfully, will send a response now...");
     return res
       .status(201)
       .cookie("token", token, {

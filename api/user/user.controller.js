@@ -26,6 +26,7 @@ function signUp(data) {
       // jwt sign
       const token = await jwtSign({ _id: user._id });
 
+      console.log({ ...user, token: token });
       return resolve({ username: user.username, token: token });
     } catch (error) {
       console.log(error);
