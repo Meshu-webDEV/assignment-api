@@ -50,7 +50,7 @@ router.post("/signin", async (req, res, next) => {
       .cookie("token", token, {
         secure: WEB_SERVER.ENV === "production" ? true : false,
         httpOnly: WEB_SERVER.ENV === "production" ? true : false,
-        // sameSite: "none", //on production
+        sameSite: "none", //on production
         maxAge: 1000 * 60 * 60 * 24 * 14, // Two Weeks
       })
       .json({ username });
@@ -72,7 +72,7 @@ router.post("/signup", async (req, res, next) => {
       .cookie("token", token, {
         secure: WEB_SERVER.ENV === "production" ? true : false,
         httpOnly: WEB_SERVER.ENV === "production" ? true : false,
-        // sameSite: "none", //on production
+        sameSite: "none", //on production
         maxAge: 1000 * 60 * 60 * 24 * 14, // Two Weeks
       })
       .json({ username });
