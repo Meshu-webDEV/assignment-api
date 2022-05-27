@@ -36,7 +36,6 @@ async function isAuthorized(req, res, next) {
   // check token in the headers
   try {
     const { token } = req.cookies;
-    console.log(token);
 
     const id = await jwtVerify(token);
 

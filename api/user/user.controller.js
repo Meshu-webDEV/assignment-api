@@ -9,15 +9,12 @@ const { jwtSign } = require("../../lib/jwt");
 function signUp(data) {
   return new Promise(async (resolve, reject) => {
     try {
-      console.log("signup started...");
       // check if exist
       const userExist = await User.findOne({ username: data.username });
-      console.log("fetched database for existing user...");
 
       if (userExist) return reject(ERRORS.USER_ALREADY_EXIST);
 
       // hash password
-      console.log("will hash password now...");
       const hashedPassword = await hashPassword(data.password);
 
       // save
@@ -25,17 +22,11 @@ function signUp(data) {
         username: data.username,
         password: hashedPassword,
       });
-      console.log("user saved in database...");
 
       // jwt sign
       const token = await jwtSign({ _id: user._id });
-      console.log("token generated...");
-
-      console.log({ ...user, token: token });
-      console.log("resolving...");
       return resolve({ username: user.username, token: token });
     } catch (error) {
-      console.log(error);
       reject(ERRORS.INTERNAL);
     }
   });
