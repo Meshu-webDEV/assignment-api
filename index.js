@@ -26,7 +26,7 @@ connect()
 
 // Middlewares
 app.set("trust proxy", 1);
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 app.use(
   cors({
     origin: [
