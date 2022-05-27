@@ -28,6 +28,7 @@ function signUp(data) {
 
       return resolve({ username: user.username, token: token });
     } catch (error) {
+      console.log(error);
       reject(ERRORS.INTERNAL);
     }
   });
