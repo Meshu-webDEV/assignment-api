@@ -65,6 +65,7 @@ router.post("/signup", async (req, res, next) => {
     // Validate
     await validate(req.body, signupSchema);
 
+    console.log("will start signup now...");
     const { username, token } = await signUp(req.body);
 
     console.log("signed up successfully, will send a response now...");
