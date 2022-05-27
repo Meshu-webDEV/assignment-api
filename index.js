@@ -1,7 +1,7 @@
 require("dotenv").config();
 console.clear();
 const express = require("express");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
 const api = require("./api");
