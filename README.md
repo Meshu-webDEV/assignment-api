@@ -23,8 +23,8 @@ to be able to log in.
 ## Results
 
 A deployed API: <sub>If you get no response, the API might be sleeping. Request again. (API is hosted on a free tier)</sub>
--	URL: https://nudgyt-assignment-api.herokuapp.com
+- [API 🧠](https://nudgyt-assignment-api.herokuapp.com)
 
 A deployed frontend Website: <sub>Looks horrible, Not a fan of Bootstrap, Tailwind all the way 🚀</sub>
--	URL: https://nudgyt-assignment.netlify.app
+- [WEBSITE 🖥](https://nudgyt-assignment.netlify.app)
 
